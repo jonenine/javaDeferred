@@ -112,7 +112,9 @@ Deferred.resolvedDeferred(App.executor,param0).pipe(new AsyncRequest2(){
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用Deferred对象提供的方案好处就是，所有的调用都是异步的，上面这一连串代码立刻就会返回。所有的业务编排会按照书写顺序在线程池中的线程里被调用，你也不必担心返回值结果和参数传递过程中的线程安全问题，框架在关键位置都做了同步，也做了相当多的测试用于验证。
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可以看出，对于异步方法调用而言，比较难以解决的问题是异步算法的编排问题。Deferred对象为异步算法提供了很好的解决方案。
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相较于AsyncRequest2类还有一个AsyncRequest1类，接口如下：
 
 
